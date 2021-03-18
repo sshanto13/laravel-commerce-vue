@@ -12,7 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use App\Http\Controllers\CategoryController;
 Route::get('/', function () {
-    return view('welcome');
+    return view('cate');
 });
+
+//route for category
+Route::get('login', [CategoryController::class, 'categoryList']);
+//Route::get('/category-list', 'App\Http\Controllers\CategoryController@categoryList');
+
